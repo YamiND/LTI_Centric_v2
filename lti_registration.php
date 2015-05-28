@@ -37,7 +37,7 @@
 				<h1 id="logo"><a href="index.html">Laker Technology <span>Innovations</span></a></h1>
 				<nav id="nav">
 					<ul>
-						<li><a href="lti_admin_panel.php">Admin Panel</a></li>
+						<li><a href="Centric_admin_panel.php">Admin Panel</a></li>
 						<li class="submenu">
 							<a href="">Pages</a>
 							<ul>
@@ -46,7 +46,7 @@
 								<li><a href="contact.html">Contact Us</a></li>
 							</ul>
 						</li>
-						<li><a href="lti_signout.php" class="button special">Sign Out</a></li>
+						<li><a href="Centric_signout.php" class="button special">Sign Out</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -93,57 +93,57 @@
 
                                             <form method="post" action="<?=$_SERVER['PHP_SELF']?>">
                                                 <fieldset>
-                                                    <?=$error['lti_First_Name']?>
+                                                    <?=$error['Centric_First_Name']?>
                                                     <p>
-                                                        <label for="lti_First_Name">First Name</label>
-                                                        <input type="text" id="lti_First_Name" name="lti_First_Name" value="" maxlength="20" required />
+                                                        <label for="Centric_First_Name">First Name</label>
+                                                        <input type="text" id="Centric_First_Name" name="Centric_First_Name" value="" maxlength="20" required />
                                                     </p>
-                                                    <?=$error['lti_Last_Name']?>
+                                                    <?=$error['Centric_Last_Name']?>
                                                     <p>
-                                                        <label for="lti_Last_Name">Last Name</label>
-                                                        <input type="text" id="lti_Last_Name" name="lti_Last_Name" value="" maxlength="20" required />
+                                                        <label for="Centric_Last_Name">Last Name</label>
+                                                        <input type="text" id="Centric_Last_Name" name="Centric_Last_Name" value="" maxlength="20" required />
                                                     </p>
-                                                    <?=$error['lti_User_Password']?>
+                                                    <?=$error['Centric_User_Password']?>
                                                     <p>
-                                                        <label for="lti_User_Password">Password</label>
-                                                        <input type="password" id="lti_User_Password" name="lti_User_Password" value="" maxlength="75" required />
+                                                        <label for="Centric_User_Password">Password</label>
+                                                        <input type="password" id="Centric_User_Password" name="Centric_User_Password" value="" maxlength="75" required />
                                                     </p>
-                                                    <?=$error['lti_User_Password_Confirm']?>
+                                                    <?=$error['Centric_User_Password_Confirm']?>
                                                      <p>
-                                                        <label for="lti_User_Password_Confirm">Confirm Password</label>
-                                                        <input type="password" id="lti_User_Password_Confirm" name="lti_User_Password_Confirm" value="" onkeyup="checkPass(); return false;" maxlength="75" required />
+                                                        <label for="Centric_User_Password_Confirm">Confirm Password</label>
+                                                        <input type="password" id="Centric_User_Password_Confirm" name="Centric_User_Password_Confirm" value="" onkeyup="checkPass(); return false;" maxlength="75" required />
                                                         <span id="confirmMessage" class="confirmMessage"></span>
                                                     </p>
-                                                    <?=$error['lti_Organization_Storage']?>
+                                                    <?=$error['Centric_Organization_Storage']?>
                                                     <p>
-                                                        <label for="lti_Organization_Storage">Amount of space for Organization (GB)</label>
-                                                        <input type="text" id="lti_Organization Storage" name="lti_Organization_Storage" value="" maxlength="20" required />
+                                                        <label for="Centric_Organization_Storage">Amount of space for Organization (GB)</label>
+                                                        <input type="text" id="Centric_Organization Storage" name="Centric_Organization_Storage" value="" maxlength="20" required />
                                                     </p>
-                                                    <?=$error['lti_User_Email']?>
+                                                    <?=$error['Centric_User_Email']?>
                                                     <p>
-                                                        <label for="lti_User_Email">Email Address (This will be the username)</label>
-                                                        <input type="email" id="lti_User_Email" name="lti_User_Email" value="" maxlength="40" required />
+                                                        <label for="Centric_User_Email">Email Address (This will be the username)</label>
+                                                        <input type="email" id="Centric_User_Email" name="Centric_User_Email" value="" maxlength="40" required />
                                                     </p>
-                                                    <?=$error['lti_User_Email_Confirm']?>
+                                                    <?=$error['Centric_User_Email_Confirm']?>
                                                     <p>
-                                                        <label for="lti_User_Email_Confirm">Confirm Email Address</label>
-                                                        <input type="email" id="lti_User_Email_Confirm" name="lti_User_Email_Confirm" value="" onkeyup="checkEmail(); return false;" maxlength="45" required />
+                                                        <label for="Centric_User_Email_Confirm">Confirm Email Address</label>
+                                                        <input type="email" id="Centric_User_Email_Confirm" name="Centric_User_Email_Confirm" value="" onkeyup="checkEmail(); return false;" maxlength="45" required />
                                          <span id="confirmEmail" class="confirmEmail"></span>
                                                     </p>
-                                                    <?=$error['lti_Bill_Addr']?>
+                                                    <?=$error['Centric_Bill_Addr']?>
                                                       <p>
-                                                        <label for="lti_Bill_Addr">Billing Address</label>
-                                                        <input type="text" id="lti_Bill_Addr" name="lti_Bill_Addr" value="" maxlength="60" />
+                                                        <label for="Centric_Bill_Addr">Billing Address</label>
+                                                        <input type="text" id="Centric_Bill_Addr" name="Centric_Bill_Addr" value="" maxlength="60" />
                                                     </p>
-                                                    <?=$error['lti_Bill_City']?>
+                                                    <?=$error['Centric_Bill_City']?>
                                                     <p>
-                                                        <label for="lti_Bill_City">City</label>
-                                                        <input type="text" id="lti_Bill_City" name="lti_Bill_City" value="" maxlength="100" required />
+                                                        <label for="Centric_Bill_City">City</label>
+                                                        <input type="text" id="Centric_Bill_City" name="Centric_Bill_City" value="" maxlength="100" required />
                                                     </p>
-                                                    <?=$error['lti_Bill_State']?>
+                                                    <?=$error['Centric_Bill_State']?>
                                                     <p>
-                                                        <label for="lti_Bill_State">State</label>
-                                                        <select required name="lti_Bill_State">
+                                                        <label for="Centric_Bill_State">State</label>
+                                                        <select required name="Centric_Bill_State">
                                                             <option value="AL">Alabama</option>
                                                             <option value="AK">Alaska</option>
                                                             <option value="AZ">Arizona</option>
@@ -197,14 +197,14 @@
                                                             <option value="WY">Wyoming</option>
                                                     </select>
                                                     </p>
-                                                    <?=$error['lti_Bill_Zip']?>
+                                                    <?=$error['Centric_Bill_Zip']?>
                                                      <p>
-                                                        <label for="lti_Bill_Zip">Zip Code</label>
-                                                        <input type="number" id="lti_Bill_Zip" name="lti_Bill_Zip" value="" maxlength="5" required />
+                                                        <label for="Centric_Bill_Zip">Zip Code</label>
+                                                        <input type="number" id="Centric_Bill_Zip" name="Centric_Bill_Zip" value="" maxlength="5" required />
                                                     </p>
                                                      <p>
-                                                        <label for="lti_admin">Make an Administrator?</label>
-                                                        <input type="checkbox" id="lti_admin" name="lti_admin" />
+                                                        <label for="Centric_admin">Make an Administrator?</label>
+                                                        <input type="checkbox" id="Centric_admin" name="Centric_admin" />
                                                     </p>
                                                     <p>
                                                         <input type="hidden" name="form_token" value="<?php echo $form_token; ?>" />
