@@ -73,9 +73,7 @@
 												<h3>Current List of Users:</h3>
 											</header>
 											 <?php
-
                                                 db_get_Curr_Users();
-
                                             ?>
 										</section>
 
