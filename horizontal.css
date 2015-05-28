@@ -90,8 +90,3 @@ body { background: #e8e8e8; }
 .oneperframe { height: 300px; line-height: 300px; }
 .oneperframe ul li { width: 1140px; }
 .oneperframe ul li.active { background: #333; }
-
-/* Crazy example */
-.crazy ul li:nth-child(2n) { width: 100px; margin: 0 4px 0 20px; }
-.crazy ul li:nth-child(3n) { width: 300px; margin: 0 10px 0 5px; }
-.crazy ul li:nth-child(4n) { width: 400px; margin: 0 30px 0 2px; }
