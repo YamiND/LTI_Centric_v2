@@ -59,7 +59,7 @@
 					<header>
 						<h2>LTI</h2>
 					</header>
-					<p><strong>Laker Technology Innovators</strong>
+					<p><strong>Laker Technology Innovations</strong>
 					<br />
 					Your number one source for Data Storage and Services</p>
 					<footer>
