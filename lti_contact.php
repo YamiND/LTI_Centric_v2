@@ -49,7 +49,7 @@
 
 				<header class="special container">
 					<span class="icon fa-envelope"></span>
-					<h2>Havee a Question?</h2>
+					<h2>Have a Question?</h2>
 					<p>Use the form below to get in contact with us</p>
 				</header>
 
