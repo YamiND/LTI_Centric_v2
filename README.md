@@ -1,5 +1,5 @@
-![ListForks](https://raw.github.com/yamind/LTI_Centric_v2/assets/LTI.png)
-#><hr>LTI Centric
+![ListForks](https://raw.githubusercontent.com/YamiND/LTI_Centric_v2/master/assets/LTI.png)
+#<hr>Centric
 
 *[Team Members](#team-members)
 
