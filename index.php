@@ -156,7 +156,7 @@
 				<!-- Three -->
 					<section class="wrapper style3 container special">
 
-						<header class="major">
+						<!--<header class="major">
 							<h2>Next look at this <strong>cool stuff</strong></h2>
 						</header>
 
@@ -220,7 +220,7 @@
 			</article>
 
 		<!-- CTA -->
-			<section id="cta">
+			<!--<section id="cta">
 
 				<header>
 					<h2>Ready to do <strong>something</strong>?</h2>
