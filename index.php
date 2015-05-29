@@ -25,7 +25,7 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 	</head>
 	<body class="index">
-	
+
 		<!-- Header -->
 			<header id="header" class="alt">
 				<h1 id="logo"><a href="index.html">Welcome to <span>LTI</span></a></h1>
@@ -35,12 +35,12 @@
 						<li class="submenu">
 							<a href="">Pages</a>
 							<ul>
-								<li><a href="about-LTI.html">About LTI</a></li>
-								<li><a href="services.html">Services</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
+								<li><a href="lti_about.php">About LTI</a></li>
+								<li><a href="lti_services.php">Services</a></li>
+								<li><a href="lti_contact.php">Contact Us</a></li>
 							</ul>
 						</li>
-						<li><a href="#" class="button special">Sign Up</a></li>
+						<li><a href="lti_signin.php" class="button special">Sign In</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -61,7 +61,7 @@
 					</header>
 					<p><strong>Laker Technology Innovators</strong>
 					<br />
-					Your number one source for Server Co-location</p>
+					Your number one source for Data Storage and Services</p>
 					<footer>
 						<ul class="buttons vertical">
 							<li><a href="#main" class="button fit scrolly">Tell Me More</a></li>
@@ -80,14 +80,6 @@
 					<h2>World class technology, from the <strong>Upper Peninsula</strong>
 					<br />
 					We are here to change the world</h2>
-<!--
-                    <p>Turns out <strong>Twenty</strong> was the best I could come up with. Anyway, lame                            name aside,
-					<br />
-					it's minimally designed, fully responsive, built on HTML5/CSS3/<strong>skel</strong>,
-					and, like all my stuff,
-					<br />
-					released for free under the <a href="http://html5up.net/license">Creative Commons Attribution 3.0</a> license. Have fun!</p> 
--->
 				</header>
 
 				<!-- One -->
@@ -98,9 +90,6 @@
 								<header>
 									<h2>We realize <strong>time management</strong> and                                                     <strong>Security</strong> are what you need. We are here to provide                                        that.</h2>
 								</header>
-                                <!--
-								<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo.</p>
--->
 								<footer>
 									<ul class="buttons">
 										<li><a href="#two" class="button fit scrolly">Find Out More</a></li>
