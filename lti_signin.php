@@ -37,26 +37,35 @@ function Centric_Query($Centric_Query)
     return $Centric_Result;
 
 }
-
-/*function db_select($query)
+function Centric_Select($Centric_Query)
 {
 
-    $result = db_query($query);
+    $Centric_Result = Centric_Query($Centric_Query);
 
     // If query failed, return `false`
-    if($result === false)
+    if($Centric_Result === false)
     {
         return false;
     }
 
     // If query was successful, retrieve all the rows into an array
-    while ($row = mysqli_fetch_assoc($result)) {
-       echo "<p>{$row['lti_email']} <br> ".
+    while ($row = mysqli_fetch_assoc($Centric_Result)) {
+       echo "<p>{$row['User_Email']} <br> ".
            " </p";
         echo "test";
     }
     return $rows;
-}*/
+}
+function Centric_Curr_Users()
+{
+    $Centric_Result = Centric_Select("SELECT * FROM Centric_Users");
+    if($Centric_Result === false)
+    {
+        return false;
+    }
+
+}
+
 
     //Form submitted
 if(isset($_POST['signin']))
@@ -82,12 +91,12 @@ if(isset($_POST['signin']))
             $Centric_Form_Token = md5( uniqid('auth', true) );
 
             $Centric_Result = Centric_Query("SELECT * FROM Centric_Users WHERE User_Email='$Centric_User_Email' AND User_Password='$Centric_User_Password'");
-            $Centric_Get_Rows = mysqli_fetch_row($result);
+            $Centric_Get_Rows = mysqli_fetch_row($Centric_Result);
 
             $Centric_User_Org_ID = $Centric_Get_Rows['Org_ID'];
             $Centric_User_ID = $Centric_Get_Rows['User_ID'];
 
-            $check_user = mysqli_num_rows($result);
+            $check_user = mysqli_num_rows($Centric_Result);
             if($check_user > 0 )
             {
                 $Centric_Result = Centric_Query("SELECT Org_Admin_Email FROM Centric_Organization where Org_ID='$Centric_User_Org_ID'");
@@ -96,14 +105,14 @@ if(isset($_POST['signin']))
 
                 if ($Centric_Org_Admin == $Centric_User_Email)
                 {
-                    $Centric_isAdmin = 1;
+                    $Centric_is_Org_Admin = 1;
                 }
                 else
                 {
-                    $Centric_isAdmin = 0;
+                    $Centric_is_Org_Admin = 0;
                 }
 
-                $_SESSION['Centric_Admin'] = $Centric_isAdmin;
+                $_SESSION['Centric_Org_Admin'] = $Centric_is_Org_Admin;
                 $_SESSION['Centric_User_Email'] = $Centric_User_Email;
                 $_SESSION['Centric_Secure_Token'] = $Centric_Form_Token;
 
@@ -127,7 +136,6 @@ if(isset($_POST['signin']))
         }
     }
 }
-
 ?>
 
 
