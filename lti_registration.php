@@ -2,16 +2,17 @@
 <?php
 session_start();
 session_regenerate_id();
-/*$Centric_Form_Token = $_SESSION['Centric_Secure_Token'];
+$Centric_Form_Token = $_SESSION['Centric_Secure_Token'];
+
 if(!isset($_SESSION['Centric_User_Email']))
 {
     header('Location: http://' . $_SERVER['HTTP_HOST'] . '/LTI_Centric_v2/lti_signin.php');
 }
-if($_SESSION['Centric_Org_Admin'] == "0")
+if($_SESSION['Centric_Org_Admin'] == "0" && $_SESSION['Centric_Admin'] == "0")
 {
     echo "<script>alert('Please Log in with an Admin Account')</script>";
     header('Location: http://' . $_SERVER['HTTP_HOST'] . '/LTI_Centric_v2/lti_signin.php');
-}*/
+}
 function Centric_Connect()
 {
 
@@ -75,16 +76,13 @@ function Centric_adduser()
 
     if ($Centric_User_Password == $Centric_User_Password_Confirm)
     {
-        echo "password matches!";
         if ($Centric_User_Email == $Centric_User_Email_Confirm)
         {
-            echo "Email matches!";
             $Centric_Con_Addr = $Centric_Bill_Addr;
             $Centric_Con_City = $Centric_Bill_City;
             $Centric_Con_State = $Centric_Bill_State;
             $Centric_Con_Zip = $Centric_Bill_Zip;
             $Centric_Con_Email = $Centric_User_Email;
-
             $Centric_Org_Admin = $Centric_User_Email;
 
             $Centric_User_Password = sha1( $Centric_User_Password );
@@ -97,15 +95,11 @@ function Centric_adduser()
             }
             else
             {
-
                 //INSERTING VALUES INTO Centric_CreditCard
                 Centric_Insert("INSERT INTO `Centric_CreditCard` (`CC_Num`, `CC_Date`, `CC_Vnum`, `Bill_First_Name`, `Bill_Last_Name`, `Bill_Addr`, `Bill_City`, `Bill_State`, `Bill_Zip` ) VALUES('$Centric_CC_Num', '$Centric_CC_Date', '$Centric_CC_Vnum', '$Centric_First_Name', '$Centric_Last_Name', '$Centric_Bill_Addr', '$Centric_Bill_City', '$Centric_Bill_State', '$Centric_Bill_Zip')");
 
-
                 //INSERTING VALUES INTO Centric_Contact
                 Centric_Insert("INSERT INTO `Centric_Contact` (`Con_First_Name`, `Con_Last_Name`, `Con_Addr`, `Con_City`, `Con_State`, `Con_Zip`, `Con_Phone`, `Con_Email`) VALUES('$Centric_First_Name', '$Centric_Last_Name', '$Centric_Con_Addr', '$Centric_Con_City', '$Centric_Con_State', '$Centric_Con_Zip', '$Centric_Con_Phone', '$Centric_Con_Email')");
-
-
 
                 //GRABBING CC_ID from Centric_CreditCard
                 $Centric_Result = Centric_Query("SELECT CC_ID from Centric_CreditCard WHERE CC_Num='$Centric_CC_Num'");
@@ -121,8 +115,6 @@ function Centric_adduser()
                 //INSERTING VALUES INTO Centric_Organization
                 Centric_Insert("INSERT INTO `Centric_Organization` (`Org_Name`, `Org_Storage`, `Org_Admin_Email`, `Tier_ID`, `CC_ID`, `Con_ID` ) VALUES('$Centric_Org_Name', '$Centric_Org_Storage', '$Centric_User_Email', '$Centric_Tier_ID', '$Centric_CC_ID', '$Centric_Con_ID')");
 
-
-                echo "Organization Insert works";
                 //GRABBING Org_ID from Centric_Organization
                 $Centric_Result = Centric_Query("SELECT Org_ID from Centric_Organization WHERE Org_Admin_Email='$Centric_User_Email' AND Org_Name = '$Centric_Org_Name' AND CC_ID='$Centric_CC_ID'");
                 $Centric_Fetch_Org_ID = mysqli_fetch_row($Centric_Result);
@@ -141,8 +133,6 @@ function Centric_adduser()
                 //INSERTING VALUES INTO Centric_Users
                 Centric_Insert("INSERT INTO `Centric_Users` (`User_Email`, `User_Password`, `First_Name`, `Last_Name`,  `Org_ID`, `Group_ID`, `File_Perm_ID`) VALUES('$Centric_User_Email', '$Centric_User_Password', '$Centric_First_Name', '$Centric_Last_Name', '$Centric_Org_ID', '$Centric_Group_ID', '$Centric_File_Perm_ID')");
 
-
-
             }
         }
     }
@@ -155,7 +145,7 @@ function Centric_adduser()
 if(isset($_POST['submit']))
 {
     //Error checking
-   /* if(!$_POST['Centric_First_Name'])
+    if(!$_POST['Centric_First_Name'])
     {
         $error['Centric_First_Name'] = "<p>Please supply the first name.</p>\n";
     }
@@ -206,19 +196,18 @@ if(isset($_POST['submit']))
 
     //No errors, process
     if(!is_array($error))
-    {*/
+    {
 
-        /*if ($_POST['form_token'] == $_SESSION['lti_prevention'])
-        {*/
+        if ($_POST['Centric_Form_Token'] == $_SESSION['Centric_Secure_Token'])
+        {
             Centric_adduser();
-            //echo " <script> window.open('lti_registration.php','_self') </script> ";
-            echo "it works!";
-        /*}
+            echo " <script> window.open('lti_registration.php','_self') </script> ";
+        }
         else
         {
             echo "I'm going to flip out if you're trying a CSS attack on me";
-        }*/
-    //}
+        }
+    }
 }
 
 ?>
@@ -238,7 +227,7 @@ if(isset($_POST['submit']))
 		<script src="js/jquery.scrollgress.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script> required
+		<script src="js/init.js"></script>
         <script src="js/validation.js"></script>
 
 		<noscript>
