@@ -110,11 +110,11 @@ function Centric_Signin()
 
         if($_SESSION['Centric_Admin'] == "1")
         {
-            echo " <script> window.open('Centric_Admin.php','_self') </script> ";
+            echo " <script> window.open('lti_registration.php','_self') </script> ";
         }
         elseif($_SESSION['Centric_Org_Admin'] == "1")
         {
-            echo " <script> window.open('Centric_Org_Admin.php','_self') </script> ";
+            echo " <script> window.open('lti_registration.php','_self') </script> ";
         }
         else
         {
