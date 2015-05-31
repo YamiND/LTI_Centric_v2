@@ -52,26 +52,39 @@ function Centric_Insert($Centric_Query)
 
     return $Centric_Insert;
 }
-
+function Centric_Curr_Emails()
+{
+    $Centric_Result = Centric_Query("SELECT `User_Email` FROM `Centric_Users`");
+    if($Centric_Result === false)
+    {
+        return false;
+    }
+    while ($row = mysqli_fetch_assoc($Centric_Result)) {
+       echo "<p>{$row['User_Email']} <br> ".
+           " </p";
+    }
+    return $rows;
+}
 function Centric_adduser()
 {
+    $Centric_Org_Name = filter_var($_POST['Centric_Org_Name'], FILTER_SANITIZE_STRING);
+    $Centric_Org_Storage = filter_var($_POST['Centric_Org_Storage'], FILTER_SANITIZE_STRING);
     $Centric_First_Name = filter_var($_POST['Centric_First_Name'], FILTER_SANITIZE_STRING);
     $Centric_Last_Name = filter_var($_POST['Centric_Last_Name'], FILTER_SANITIZE_STRING);
     $Centric_User_Password = filter_var($_POST['Centric_User_Password'], FILTER_SANITIZE_STRING);
     $Centric_User_Password_Confirm = filter_var($_POST['Centric_User_Password_Confirm'], FILTER_SANITIZE_STRING);
-    $Centric_Org_Name = filter_var($_POST['Centric_Org_Name'], FILTER_SANITIZE_STRING);
-    $Centric_Org_Storage = filter_var($_POST['Centric_Org_Storage'], FILTER_SANITIZE_STRING);
     $Centric_User_Email = filter_var($_POST['Centric_User_Email'], FILTER_SANITIZE_STRING);
     $Centric_User_Email_Confirm = filter_var($_POST['Centric_User_Email_Confirm'], FILTER_SANITIZE_STRING);
+    $Centric_CC_Num = filter_var($_POST['Centric_CC_Num'], FILTER_SANITIZE_STRING);
+    $Centric_CC_Date = filter_var($_POST['Centric_CC_Date'], FILTER_SANITIZE_STRING);
+    $Centric_CC_Vnum = filter_var($_POST['Centric_CC_Vnum'], FILTER_SANITIZE_STRING);
     $Centric_Bill_Addr = filter_var($_POST['Centric_Bill_Addr'], FILTER_SANITIZE_STRING);
     $Centric_Bill_City = filter_var($_POST['Centric_Bill_City'], FILTER_SANITIZE_STRING);
     $Centric_Bill_State = filter_var($_POST['Centric_Bill_State'], FILTER_SANITIZE_STRING);
     $Centric_Bill_Zip = filter_var($_POST['Centric_Bill_Zip'], FILTER_SANITIZE_STRING);
     $Centric_Con_Phone = filter_var($_POST['Centric_Con_Phone'], FILTER_SANITIZE_STRING);
     $Centric_Tier_ID = filter_var($_POST['Centric_Tier_ID'], FILTER_SANITIZE_STRING);
-    $Centric_CC_Num = filter_var($_POST['Centric_CC_Num'], FILTER_SANITIZE_STRING);
-    $Centric_CC_Date = filter_var($_POST['Centric_CC_Date'], FILTER_SANITIZE_STRING);
-    $Centric_CC_Vnum = filter_var($_POST['Centric_CC_Vnum'], FILTER_SANITIZE_STRING);
+
 
 
     if ($Centric_User_Password == $Centric_User_Password_Confirm)
@@ -145,6 +158,14 @@ function Centric_adduser()
 if(isset($_POST['submit']))
 {
     //Error checking
+    if(!$_POST['Centric_Org_Name'])
+    {
+        $error['Centric_Org_Name'] = "<p>Please supply the Organization name.</p>\n";
+    }
+    if(!$_POST['Centric_Org_Storage'])
+    {
+        $error['Centric_Org_Storage'] = "<p>Please supply the size limit.</p>\n";
+    }
     if(!$_POST['Centric_First_Name'])
     {
         $error['Centric_First_Name'] = "<p>Please supply the first name.</p>\n";
@@ -157,21 +178,30 @@ if(isset($_POST['submit']))
     {
         $error['Centric_User_Password'] = "<p>Please supply the password.</p>\n";
     }
-    if(!$_POST['Centric_Password_Confirm'])
+    if(!$_POST['Centric_User_Password_Confirm'])
     {
-        $error['Centric_Password_Confirm'] = "<p>Please supply the confirmed password.</p>\n";
+        $error['Centric_User_Password_Confirm'] = "<p>Please supply the confirmed password.</p>\n";
     }
-    if(!$_POST['Centric_Organization_Storage'])
-    {
-        $error['Centric_Organization_Storage'] = "<p>Please supply the size limit.</p>\n";
-    }
+
     if(!$_POST['Centric_User_Email'])
     {
         $error['Centric_User_Email'] = "<p>Please supply the email.</p>\n";
     }
-    if(!$_POST['Centric_Email_Confirm'])
+    if(!$_POST['Centric_User_Email_Confirm'])
     {
-        $error['Centric_Email_Confirm'] = "<p>Please supply the email.</p>\n";
+        $error['Centric_User_Email_Confirm'] = "<p>Please supply the email.</p>\n";
+    }
+    if(!$_POST['Centric_CC_Num'])
+    {
+        $error['Centric_CC_Num'] = "<p>Please supply a Credit Card number.</p>\n";
+    }
+    if(!$_POST['Centric_CC_Date'])
+    {
+        $error['Centric_CC_Date'] = "<p>Please supply a Credit Card Exp Date.</p>\n";
+    }
+    if(!$_POST['Centric_CC_Vnum'])
+    {
+        $error['Centric_CC_Vnum'] = "<p>Please supply the verification number.</p>\n";
     }
     if(!$_POST['Centric_Bill_Addr'])
     {
@@ -183,15 +213,19 @@ if(isset($_POST['submit']))
     }
     if(!$_POST['Centric_Bill_State'])
     {
-        $error['lti_state'] = "<p>Please supply the state.</p>\n";
+        $error['Centric_Bill_State'] = "<p>Please supply the state.</p>\n";
     }
     if(!$_POST['Centric_Bill_Zip'])
     {
-        $error['lti_zip'] = "<p>Please supply the zip.</p>\n";
+        $error['Centric_Bill_Zip'] = "<p>Please supply the zip.</p>\n";
     }
     if(!$_POST['Centric_Con_Phone'])
     {
         $error['Centric_Con_Phone'] = "<p>Please supply a phone number.</p>\n";
+    }
+    if(!$_POST['Centric_Tier_ID'])
+    {
+        $error['Centric_Tier_ID'] = "<p>Please supply the Tier ID.</p>\n";
     }
 
     //No errors, process
@@ -201,7 +235,6 @@ if(isset($_POST['submit']))
         if ($_POST['Centric_Form_Token'] == $_SESSION['Centric_Secure_Token'])
         {
             Centric_adduser();
-            echo " <script> window.open('lti_registration.php','_self') </script> ";
         }
         else
         {
@@ -283,7 +316,7 @@ if(isset($_POST['submit']))
 											</header>
 											 <?php
 
-                                                #db_get_Curr_Users();
+                                                Centric_Curr_Emails();
 
                                             ?>
 										</section>
@@ -434,7 +467,7 @@ if(isset($_POST['submit']))
                                                     <?=$error['Centric_Con_Phone']?>
                                                      <p>
                                                         <label for="Centric_Con_Phone">Phone Number</label>
-                                                        <input type="tel" id="Centric_Con_Phone" name="Centric_Con_Phone" value="" maxlength="10" required />
+                                                        <input type="num" id="Centric_Con_Phone" name="Centric_Con_Phone" value="" maxlength="10" required />
                                                     </p>
                                                     <?=$error['Centric_Tier_ID']?>
                                                     <p>
