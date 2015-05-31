@@ -64,7 +64,6 @@ function Centric_Curr_Users()
     }
 
 }
-
 function Centric_Signin()
 {
     $Centric_User_Email = filter_var($_POST['Centric_User_Email'], FILTER_SANITIZE_STRING);
@@ -81,8 +80,8 @@ function Centric_Signin()
     $Centric_User_ID = $Centric_Get_Rows['User_ID'];
     $Centric_Group_ID = $Centric_Get_Rows['Group_ID'];
 
-    $check_user = mysqli_num_rows($Centric_Result);
-    if($check_user > 0 )
+    $Centric_User_Exists = mysqli_num_rows($Centric_Result);
+    if($Centric_User_Exists > 0 )
     {
 
         if ($Centric_Group_ID == "1")
@@ -130,7 +129,8 @@ function Centric_Signin()
     exit;
 
 }
-    //Form submitted
+
+//Form submitted
 if(isset($_POST['signin']))
 {
     //Error checking
@@ -145,13 +145,10 @@ if(isset($_POST['signin']))
     //No errors, process
     if(!is_array($error))
     {
-        //Process your form
-        if(isset($_POST['Centric_User_Email']))
-        {
            Centric_Signin();
-        }
     }
 }
+
 ?>
 
 
