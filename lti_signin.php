@@ -28,7 +28,6 @@ function Centric_Connect()
     }
     return $Centric_Connection;
 }
-
 function Centric_Query($Centric_Query)
 {
 
@@ -66,7 +65,59 @@ function Centric_Curr_Users()
 
 }
 
+function Centric_Signin()
+{
+    $Centric_User_Email = filter_var($_POST['Centric_User_Email'], FILTER_SANITIZE_STRING);
+    $Centric_User_Password_Post = filter_var($_POST['Centric_User_Password'], FILTER_SANITIZE_STRING);
 
+    $Centric_User_Password = sha1( $Centric_User_Password_Post );
+    $Centric_Form_Token = md5( uniqid('auth', true) );
+
+    $Centric_Result = Centric_Query("SELECT * FROM Centric_Users WHERE User_Email='$Centric_User_Email' AND User_Password='$Centric_User_Password'");
+
+    $Centric_Get_Rows = mysqli_fetch_assoc($Centric_Result);
+
+    $Centric_User_Org_ID = $Centric_Get_Rows['Org_ID'];
+    $Centric_User_ID = $Centric_Get_Rows['User_ID'];
+
+    $check_user = mysqli_num_rows($Centric_Result);
+    if($check_user > 0 )
+    {
+        $Centric_Result = Centric_Query("SELECT Org_Admin_Email FROM Centric_Organization where Org_ID='$Centric_User_Org_ID'");
+        $row = mysqli_fetch_row($Centric_Result);
+        $Centric_Org_Admin = $row[0];
+
+        if ($Centric_Org_Admin === $Centric_User_Email)
+        {
+            $Centric_is_Org_Admin = 1;
+        }
+        else
+        {
+            $Centric_is_Org_Admin = 0;
+        }
+
+        $_SESSION['Centric_Org_Admin'] = $Centric_is_Org_Admin;
+        $_SESSION['Centric_User_Email'] = $Centric_User_Email;
+        $_SESSION['Centric_Secure_Token'] = $Centric_Form_Token;
+
+        if($_SESSION['Centric_Org_Admin'] == "1")
+        {
+            echo " <script> window.open('Centric_Admin.php','_self') </script> ";
+        }
+        else
+        {
+            echo " <script> window.open('Centric.php','_self') </script> ";
+        }
+    }
+    else
+    {
+        echo "<script>alert('Email or password is not correct, try again!')</script>";
+
+    }
+
+    exit;
+
+}
     //Form submitted
 if(isset($_POST['signin']))
 {
@@ -85,54 +136,7 @@ if(isset($_POST['signin']))
         //Process your form
         if(isset($_POST['Centric_User_Email']))
         {
-            $Centric_User_Email = filter_var($_POST['Centric_User_Email'], FILTER_SANITIZE_STRING);
-            $Centric_User_Password_Post = filter_var($_POST['Centric_User_Password'], FILTER_SANITIZE_STRING);
-            $Centric_User_Password = sha1( $Centric_User_Password );
-            $Centric_Form_Token = md5( uniqid('auth', true) );
-
-            $Centric_Result = Centric_Query("SELECT * FROM Centric_Users WHERE User_Email='$Centric_User_Email' AND User_Password='$Centric_User_Password'");
-            $Centric_Get_Rows = mysqli_fetch_row($Centric_Result);
-
-            $Centric_User_Org_ID = $Centric_Get_Rows['Org_ID'];
-            $Centric_User_ID = $Centric_Get_Rows['User_ID'];
-
-            $check_user = mysqli_num_rows($Centric_Result);
-            if($check_user > 0 )
-            {
-                $Centric_Result = Centric_Query("SELECT Org_Admin_Email FROM Centric_Organization where Org_ID='$Centric_User_Org_ID'");
-                $row = mysqli_fetch_row($Centric_Result);
-                $Centric_Org_Admin = $row[0];
-
-                if ($Centric_Org_Admin == $Centric_User_Email)
-                {
-                    $Centric_is_Org_Admin = 1;
-                }
-                else
-                {
-                    $Centric_is_Org_Admin = 0;
-                }
-
-                $_SESSION['Centric_Org_Admin'] = $Centric_is_Org_Admin;
-                $_SESSION['Centric_User_Email'] = $Centric_User_Email;
-                $_SESSION['Centric_Secure_Token'] = $Centric_Form_Token;
-
-                if($_SESSION['Centric_Admin'] == "1")
-                {
-                    echo " <script> window.open('Centric_Admin.php','_self') </script> ";
-                }
-                else
-                {
-                    echo " <script> window.open('Centric.php','_self') </script> ";
-                }
-            }
-            else
-            {
-
-                echo "<script>alert('Email or password is not correct, try again!')</script>";
-
-            }
-
-            exit;
+           Centric_Signin();
         }
     }
 }
