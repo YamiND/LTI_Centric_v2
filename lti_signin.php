@@ -106,14 +106,15 @@ function Centric_Signin()
         $_SESSION['Centric_Admin'] = $Centric_is_Admin;
         $_SESSION['Centric_User_Email'] = $Centric_User_Email;
         $_SESSION['Centric_Secure_Token'] = $Centric_Form_Token;
+        $_SESSION['Centric_Org_ID'] = $Centric_User_Org_ID;
 
         if($_SESSION['Centric_Admin'] == "1")
         {
-            echo " <script> window.open('lti_registration.php','_self') </script> ";
+            echo " <script> window.open('lti_org_admin.php','_self') </script> ";
         }
         elseif($_SESSION['Centric_Org_Admin'] == "1")
         {
-            echo " <script> window.open('lti_registration.php','_self') </script> ";
+            echo " <script> window.open('lti_org_admin.php','_self') </script> ";
         }
         else
         {
