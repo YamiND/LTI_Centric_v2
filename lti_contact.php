@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Contact Us</title>
+		<title>LTI: Contact Us</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -49,7 +49,7 @@
 
 				<header class="special container">
 					<span class="icon fa-envelope"></span>
-					<h2>Got a Question?</h2>
+					<h2>Have a Question?</h2>
 					<p>Use the form below to get in contact with us</p>
 				</header>
 

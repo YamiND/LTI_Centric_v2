@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>LTI</title>
+		<title>LTI: Services</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -80,7 +80,7 @@
 									<header>
 										<h3>LTI</h3>
 									</header>
-									<p>Our services provide convenience and security for you. Pricing area Laker Tech Innovations provides customers with 1u and 2u server hosting. Single server hosting provides customers with the ability to be able to control exactly the amount of space which cuts any excess cost. This is a great option for start ups and a way to micro manage bigger companies. All servers will be placed in secured racks under key cared secured doors. The safety of your data is our priority. <br>
+									<p>Our services provide convenience and security for you. Laker Tech Innovations provides customers with 1u and 2u server hosting. Single server hosting provides customers with the ability to be able to control exactly the amount of space which cuts any excess cost. This is a great option for start ups and a way to micro manage bigger companies. All servers will be placed in secured racks under key cared secured doors. The safety of your data is our priority. <br>
 Our packages include:<br>
                                     <section class="wrapper style1 container special">
 						<div class="row">
@@ -131,7 +131,7 @@ Our packages include:<br>
 							</div>
 						</div>
 					</section>
-<p> For more information please contact us at Lakertechnologies@gmail.com</p>
+
 			</article></p>
                         
                         

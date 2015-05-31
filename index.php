@@ -59,7 +59,7 @@
 					<header>
 						<h2>LTI</h2>
 					</header>
-					<p><strong>Laker Technology Innovators</strong>
+					<p><strong>Laker Technology Innovations</strong>
 					<br />
 					Your number one source for Data Storage and Services</p>
 					<footer>
@@ -156,7 +156,7 @@
 				<!-- Three -->
 					<section class="wrapper style3 container special">
 
-						<header class="major">
+						<!--<header class="major">
 							<h2>Next look at this <strong>cool stuff</strong></h2>
 						</header>
 
@@ -220,7 +220,7 @@
 			</article>
 
 		<!-- CTA -->
-			<section id="cta">
+			<!--<section id="cta">
 
 				<header>
 					<h2>Ready to do <strong>something</strong>?</h2>
