@@ -79,15 +79,22 @@ function Centric_Signin()
 
     $Centric_User_Org_ID = $Centric_Get_Rows['Org_ID'];
     $Centric_User_ID = $Centric_Get_Rows['User_ID'];
+    $Centric_Group_ID = $Centric_Get_Rows['Group_ID'];
 
     $check_user = mysqli_num_rows($Centric_Result);
     if($check_user > 0 )
     {
-        $Centric_Result = Centric_Query("SELECT Org_Admin_Email FROM Centric_Organization where Org_ID='$Centric_User_Org_ID'");
-        $row = mysqli_fetch_row($Centric_Result);
-        $Centric_Org_Admin = $row[0];
 
-        if ($Centric_Org_Admin === $Centric_User_Email)
+        if ($Centric_Group_ID == "1")
+        {
+            $Centric_is_Admin = 1;
+        }
+        else
+        {
+            $Centric_is_Admin = 0;
+        }
+
+        if ($Centric_Group_ID == "2")
         {
             $Centric_is_Org_Admin = 1;
         }
@@ -97,12 +104,17 @@ function Centric_Signin()
         }
 
         $_SESSION['Centric_Org_Admin'] = $Centric_is_Org_Admin;
+        $_SESSION['Centric_Admin'] = $Centric_is_Admin;
         $_SESSION['Centric_User_Email'] = $Centric_User_Email;
         $_SESSION['Centric_Secure_Token'] = $Centric_Form_Token;
 
-        if($_SESSION['Centric_Org_Admin'] == "1")
+        if($_SESSION['Centric_Admin'] == "1")
         {
             echo " <script> window.open('Centric_Admin.php','_self') </script> ";
+        }
+        elseif($_SESSION['Centric_Org_Admin'] == "1")
+        {
+            echo " <script> window.open('Centric_Org_Admin.php','_self') </script> ";
         }
         else
         {
