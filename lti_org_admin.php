@@ -114,13 +114,13 @@ function Centric_Query($Centric_Query)
 									<div class="sidebar">
 										<section>
 											<header>
-												<h3>Current List of Users:</h3>
+												<h3><?php
+
+                                               echo $_SESSION['Centric_User_Email'];
+
+                                            ?></h3>
 											</header>
-											 <?php
 
-                                               echo "Welcome" . $_SESSION['Centric_User_Email'] . "to the Administration interface";
-
-                                            ?>
 										</section>
 
 									</div>
