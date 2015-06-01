@@ -77,11 +77,13 @@ function Centric_Org_Adduser()
 
     if(isset($_POST['Centric_User_Password_Change']))
     {
-        $Centric_User_Password_Change = '1';
+        $Centric_User_Password_Change = 1;
+
     }
     else
     {
-        $Centric_user_Password_Change = '0';
+        $Centric_User_Password_Change = 0;
+
     }
 
 
@@ -92,7 +94,7 @@ function Centric_Org_Adduser()
 
             $Centric_User_Password = sha1( $Centric_User_Password );
 
-            $Centric_Result = Centric_Query("select User_Email from Centric_Users where User_Email='$Centric_User_Email'");
+            $Centric_Result = Centric_Query("select User_Email from Centric_Users where User_Email='$Centric_User_Email' AND Org_ID='$Centric_Org_ID'");
             $Centric_Email_Exists = mysqli_num_rows($Centric_Result);
             $Centric_Org_ID = $_SESSION['Centric_Org_ID'];
 
@@ -103,14 +105,20 @@ function Centric_Org_Adduser()
             else
             {
                 //GRABBING Org_Group_ID from Centric_Org_Group
-                $Centric_Result = Centric_Query("SELECT Org_Group_ID from Centric_Org_Group WHERE Group_Name='Default'");
-                $Centric_Fetch_Group_ID = mysqli_fetch_row($Centric_Result);
+                $Centric_Result = Centric_Query("SELECT Org_Group_ID from Centric_Org_Group WHERE Org_Group_Name='Default'");
+                $Centric_Fetch_Org_Group_ID = mysqli_fetch_row($Centric_Result);
                 $Centric_Org_Group_ID = $Centric_Fetch_Org_Group_ID[0];
 
                 //GRABBING File_Perm_ID from Centric_FilePerm
                 $Centric_Result = Centric_Query("SELECT File_Perm_ID from Centric_Org_Group WHERE Org_Group_ID='$Centric_Org_Group_ID'");
                 $Centric_Fetch_File_Perm_ID = mysqli_fetch_row($Centric_Result);
                 $Centric_File_Perm_ID = $Centric_Fetch_File_Perm_ID[0];
+
+
+                //GRABBING File_Perm_ID from Centric_FilePerm
+                $Centric_Result = Centric_Query("SELECT Group_ID from Centric_Group WHERE Group_Name='Default'");
+                $Centric_Fetch_Group_ID = mysqli_fetch_row($Centric_Result);
+                $Centric_Group_ID = $Centric_Fetch_Group_ID[0];
 
                 //INSERTING VALUES INTO Centric_Users
                 Centric_Insert("INSERT INTO `Centric_Users` (`User_Email`, `User_Password`, `First_Name`, `Last_Name`,  `Org_ID`, `Group_ID`, `File_Perm_ID`, `Org_Group_ID`, `User_Password_Change`) VALUES('$Centric_User_Email', '$Centric_User_Password', '$Centric_First_Name', '$Centric_Last_Name', '$Centric_Org_ID', '$Centric_Group_ID', '$Centric_File_Perm_ID', '$Centric_Org_Group_ID', '$Centric_User_Password_Change')");
