@@ -79,6 +79,7 @@ function Centric_Signin()
     $Centric_User_Org_ID = $Centric_Get_Rows['Org_ID'];
     $Centric_User_ID = $Centric_Get_Rows['User_ID'];
     $Centric_Group_ID = $Centric_Get_Rows['Group_ID'];
+    $Centric_User_Password_Change = $Centric_Get_Rows['User_Password_Change'];
 
     $Centric_User_Exists = mysqli_num_rows($Centric_Result);
     if($Centric_User_Exists > 0 )
@@ -102,11 +103,18 @@ function Centric_Signin()
             $Centric_is_Org_Admin = 0;
         }
 
+        if($Centric_User_Password_Change == "1")
+        {
+           echo " <script> window.open('lti_reset.php','_self') </script> ";
+
+        }
+
         $_SESSION['Centric_Org_Admin'] = $Centric_is_Org_Admin;
         $_SESSION['Centric_Admin'] = $Centric_is_Admin;
         $_SESSION['Centric_User_Email'] = $Centric_User_Email;
         $_SESSION['Centric_Secure_Token'] = $Centric_Form_Token;
         $_SESSION['Centric_Org_ID'] = $Centric_User_Org_ID;
+
 
         if($_SESSION['Centric_Admin'] == "1")
         {
