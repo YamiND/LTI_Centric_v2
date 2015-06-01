@@ -62,14 +62,6 @@ function Centric_Reset_Password()
             $Centric_Org_ID = $_SESSION['Centric_Org_ID'];
             $Centric_Result = Centric_Query("select User_Email from Centric_Users where User_Email='$Centric_User_Email'");
 
-
-            echo "$Centric_User_Email";
-            echo "$Centric_User_Password";
-            echo "$Centric_Org_ID";
-
-
-
-
                 Centric_Update("UPDATE `Centric_Users` SET User_Password = '$Centric_User_Password', User_Password_Change = '0' WHERE User_Email='$Centric_User_Email' AND Org_ID = '$Centric_Org_ID'");
 
 
