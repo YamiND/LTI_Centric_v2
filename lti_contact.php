@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['submit'])){
-    $to = "contact@lakertech.com"; // this is your Email address
+    $to = "contact-us@lakertech.com"; // this is your Email address
     $from = $_POST['email']; // this is the sender's Email address
     $name = $_POST['name'];
     $subject = "Form submission";
@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
     mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
     echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
     // You can also use header('Location: thank_you.php'); to redirect to another page.
-    }
+
 ?>
 
 
@@ -79,7 +79,7 @@ if(isset($_POST['submit'])){
 
 						<!-- Content -->
 							<div class="content">
-								<form>
+							<form method="post" action="<?=$_SERVER['PHP_SELF']?>">
 									<div class="row 50%">
 										<div class="6u 12u(mobile)">
 											<input type="text" name="name" placeholder="Name" />
