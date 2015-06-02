@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Twenty by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>LTI: About</title>
@@ -35,28 +31,16 @@
 				<h1 id="logo"><a href="index.html">Welcome To <span>LTI</span></a></h1>
 				<nav id="nav">
 					<ul>
-						<li class="current"><a href="index.html">Welcome</a></li>
+						<li class="current"><a href="index.php">Home</a></li>
 						<li class="submenu">
 							<a href="">Pages</a>
 							<ul>
-								<li><a href="about-LTI.html">About LTI</a></li>
-								<li><a href="services.html">Services</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
-								<!--
-                                <li class="submenu">
-									<a href="">Submenu</a>
-									<ul>
-										<li><a href="#">Dolore Sed</a></li>
-										<li><a href="#">Consequat</a></li>
-										<li><a href="#">Lorem Magna</a></li>
-										<li><a href="#">Sed Magna</a></li>
-										<li><a href="#">Ipsum Nisl</a></li>
-									</ul>
-								</li>
-                                -->
+								<li><a href="lti_about.php">About LTI</a></li>
+								<li><a href="lti_services.php">Services</a></li>
+								<li><a href="lti_contact.php">Contact Us</a></li>
 							</ul>
 						</li>
-						<li><a href="#" class="button special">Sign Up</a></li>
+						<li><a href="lti_signin.php" class="button special">Sign Up</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -71,34 +55,17 @@
 				</header>
 
 				<!-- One -->
-					<section class="wrapper style4 container">
-
-						<!-- Content -->
-							<div class="content">
-								<section>
-									<a href="#" class="image featured"><img src="/images/LTIgroup.jpg" alt="LTI members" /></a>
-									<header>
-										<h3>LTI</h3>
-									</header>
-									<p>Laker Tech Innovations  is a start up in  Sault Ste Marie, MI connecting business and technology together. Starting in 2014 LTI has created a strong infrastructure for businesses large or small to help promote technological growth in Northern Michigan by providing data centers, website design, and server hosting. Our goal is to build relationships with companies. We love what we do and are willing to go the extra mile to get things done. Our main data center location is located in Sault Ste Marie, Mi at the Ssmartzone Building. At Laker Tech innovations we focus on the customers and work with clients to create intelligent solutions.  </p>
-								</section>
-							</div>
-
-					</section>
-
-				<!-- Two -->
-					<section class="wrapper style1 container special">
+                <section class="wrapper style1 container special">
 						<div class="row">
 							<div class="4u 12u(narrower)">
-
 								<section>
 									<header>
-										<h3>More about our Founders</h3>
+										<h3>About the Founders</h3>
 									</header>
-									<p>Learn more about how LTI started and its founding members</p>
+									<p>LTI Members have very unique and diverse backgrounds. To find out more, please click the link below:</p>
 									<footer>
 										<ul class="buttons">
-											<li><a href="More%20in-depth%20About%20us.html" class="button small">Learn More</a></li>
+											<li><a href="#lti_members" class="button small">About Members</a></li>
 										</ul>
 									</footer>
 								</section>
@@ -108,12 +75,12 @@
 
 								<section>
 									<header>
-										<h3>Also Something</h3>
+										<h3>About Centric</h3>
 									</header>
-									<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+									<p>Centric is a set of software utilities aimed at businesses. To find out more, please see the link below:</p>
 									<footer>
 										<ul class="buttons">
-											<li><a href="#" class="button small">Learn More</a></li>
+											<li><a href="#lti_centric" class="button small">About Centric</a></li>
 										</ul>
 									</footer>
 								</section>
@@ -123,12 +90,12 @@
 
 								<section>
 									<header>
-										<h3>Probably Something</h3>
+										<h3>About Server Hosting</h3>
 									</header>
-									<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+									<p>We allow businesses to host their servers at our facilities. To find out more, please click the link below:</p>
 									<footer>
 										<ul class="buttons">
-											<li><a href="#" class="button small">Learn More</a></li>
+											<li><a href="lti_collocation" class="button small">Server Hosting</a></li>
 										</ul>
 									</footer>
 								</section>
@@ -137,14 +104,55 @@
 						</div>
 					</section>
 
+
+
+					<section class="wrapper style4 container">
+
+						<!-- Content -->
+
+
+							<div class="content" id="lti_members">
+								<section>
+
+                                    <h3>About our Members</h3>
+									<a href="#" class="image featured"><img src="/images/LTIgroup.jpg" alt="LTI members" /></a>
+									<header>
+										<h3>About our Members</h3>
+									</header>
+									<p>Laker Tech Innovations  is a start up in  Sault Ste Marie, MI connecting business and technology together. Starting in 2014 LTI has created a strong infrastructure for businesses large or small to help promote technological growth in Northern Michigan by providing data centers, website design, and server hosting. Our goal is to build relationships with companies. We love what we do and are willing to go the extra mile to get things done. Our main data center location is located in Sault Ste Marie, Mi at the Ssmartzone Building. At Laker Tech innovations we focus on the customers and work with clients to create intelligent solutions.  </p>
+								</section>
+							</div>
+
+                        <div class="content" id="lti_centric">
+								<section>
+
+                                    <h3>About Centric</h3>
+
+									<p>Centric is a suite of software designed to allow an easy way to synchronize, backup, and restore data. We offer both a web and desktop interface to allow quick access to Centric on a multiple of devices. We have multiple plans designed to fit your business' needs. </p>
+								</section>
+							</div>
+
+                        <div class="content" id="lti_collocation">
+								<section>
+
+                                    <h3>About Server Collocation</h3>
+
+									<p>Every business should have an offsite location to store their data in case their main data becomes unaccessible. Unlike other data storage companies, LTI offers cheap competitive prices for an essential service.</p>
+								</section>
+							</div>
+					</section>
+
+				<!-- Two -->
+
+
 			</article>
 
 		<!-- Footer -->
 			<footer id="footer">
 
 				<ul class="icons">
-					<li><a href="#" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
+					<li><a href="https://www.facebook.com/lakertech" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="https://github.com/YamiND/LTI_Centric_v2" class="icon circle fa-github"><span class="label">Github</span></a></li>
 				</ul>
 
 				<ul class="copyright">

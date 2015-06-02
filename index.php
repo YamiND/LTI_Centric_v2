@@ -31,7 +31,7 @@
 				<h1 id="logo"><a href="index.html">Welcome to <span>LTI</span></a></h1>
 				<nav id="nav">
 					<ul>
-						<li class="current"><a href="index.html">Welcome</a></li>
+						<li class="current"><a href="index.php">Home</a></li>
 						<li class="submenu">
 							<a href="">Pages</a>
 							<ul>
@@ -239,9 +239,8 @@
 			<footer id="footer">
 
 				<ul class="icons">
-					<li><a href="#" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
-					<li><a href="#" class="icon circle fa-github"><span class="label">Github</span></a></li>
+					<li><a href="https://www.facebook.com/lakertech" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="https://github.com/YamiND/LTI_Centric_v2" class="icon circle fa-github"><span class="label">Github</span></a></li>
 				</ul>
 
 				<ul class="copyright">

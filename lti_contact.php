@@ -1,3 +1,24 @@
+<?php
+if(isset($_POST['submit'])){
+    $to = "contact@lakertech.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $name = $_POST['name'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
+
+
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -27,19 +48,19 @@
 
 		<!-- Header -->
 			<header id="header" class="skel-layers-fixed">
-				<h1 id="logo"><a href="index.html">Welcome To <span>LTI</span></a></h1>
+				<h1 id="logo"><a href="index.php">Welcome To <span>LTI</span></a></h1>
 				<nav id="nav">
 					<ul>
-						<li class="current"><a href="index.html">Welcome</a></li>
+						<li class="current"><a href="index.html">Home</a></li>
 						<li class="submenu">
 							<a href="">Pages</a>
 							<ul>
-								<li><a href="about-LTI.html">About LTI</a></li>
-								<li><a href="services.html">Our Services</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
+								<li><a href="lti_about.php">About LTI</a></li>
+								<li><a href="lti_services.php">Our Services</a></li>
+								<li><a href="lti_contact.php">Contact Us</a></li>
 							</ul>
 						</li>
-						<li><a href="#" class="button special">Sign Up</a></li>
+						<li><a href="lti_signin.php" class="button special">Sign Up</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -95,15 +116,13 @@
 			<footer id="footer">
 
 				<ul class="icons">
-					<li><a href="#" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
-					<li><a href="#" class="icon circle fa-github"><span class="label">Github</span></a></li>
+				    <li><a href="https://www.facebook.com/lakertech" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="https://github.com/YamiND/LTI_Centric_v2" class="icon circle fa-github"><span class="label">Github</span></a></li>
 				</ul>
 
 				<ul class="copyright">
-					<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					<li>&copy; LTI</li>
 				</ul>
-
 			</footer>
 
 	</body>

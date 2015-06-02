@@ -35,13 +35,13 @@
 				<h1 id="logo"><a href="index.html">Welcome To <span>LTI</span></a></h1>
 				<nav id="nav">
 					<ul>
-						<li class="current"><a href="index.html">Welcome</a></li>
+						<li class="current"><a href="index.php">Home</a></li>
 						<li class="submenu">
 							<a href="">Pages</a>
 							<ul>
-								<li><a href="about-LTI.html">About LTI</a></li>
-								<li><a href="services.html">Services</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
+								<li><a href="lti_about.php">About LTI</a></li>
+								<li><a href="lti_services.php">Services</a></li>
+								<li><a href="lti_contact.php">Contact Us</a></li>
 								<!--
                                 <li class="submenu">
 									<a href="">Submenu</a>
@@ -56,7 +56,7 @@
                                 -->
 							</ul>
 						</li>
-						<li><a href="#" class="button special">Sign Up</a></li>
+						<li><a href="lti_signin.php" class="button special">Sign Up</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -133,8 +133,8 @@ Our packages include:<br>
 					</section>
 
 			</article></p>
-                        
-                        
+
+
 								</section>
 							</div>
 
@@ -144,8 +144,8 @@ Our packages include:<br>
 			<footer id="footer">
 
 				<ul class="icons">
-					<li><a href="#" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
+					<li><a href="https://www.facebook.com/lakertech" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="https://github.com/YamiND/LTI_Centric_v2" class="icon circle fa-github"><span class="label">Github</span></a></li>
 				</ul>
 
 				<ul class="copyright">
