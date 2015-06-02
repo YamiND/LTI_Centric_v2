@@ -133,11 +133,21 @@
 							</div>
 
                         <div class="content" id="lti_collocation">
+
 								<section>
 
-                                    <h3>About Server Collocation</h3>
+									<header>
+										<h3>Server Collocation</h3>
+									</header>
+									<p>Our services provide convenience and security for you. Laker Tech Innovations provides customers with 1u and 2u server hosting. Single server hosting provides customers with the ability to be able to control exactly the amount of space which cuts any excess cost. This is a great option for start ups and a way to micro manage bigger companies. All servers will be placed in secured racks. The safety of your data is our priority. <br>
+Our packages include:<br>
+                                   	<ul class="buttons">
+											<li><a href="lti_services.php/#lti_collocation" class="button small">Learn More</a></li>
+										</ul
 
-									<p>Every business should have an offsite location to store their data in case their main data becomes unaccessible. Unlike other data storage companies, LTI offers cheap competitive prices for an essential service.</p>
+			</article></p>
+
+
 								</section>
 							</div>
 					</section>
