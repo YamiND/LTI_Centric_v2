@@ -64,9 +64,9 @@
 									</header>
 									<p>LTI Members have very unique and diverse backgrounds. To find out more, please click the link below:</p>
 									<footer>
-										<ul class="buttons">
-											<li><a href="#lti_members" class="button small">About Members</a></li>
-										</ul>
+										<ul class="buttons vertical">
+							             <li><a href="#lti_members" class="button fit scrolly">Tell Me More</a></li>
+						                  </ul>
 									</footer>
 								</section>
 
@@ -79,9 +79,9 @@
 									</header>
 									<p>Centric is a set of software utilities aimed at businesses. To find out more, please see the link below:</p>
 									<footer>
-										<ul class="buttons">
-											<li><a href="#lti_centric" class="button small">About Centric</a></li>
-										</ul>
+										<ul class="buttons vertical">
+							                 <li><a href="#lti_centric" class="button fit scrolly">Tell Me More</a></li>
+						                  </ul>
 									</footer>
 								</section>
 
@@ -94,9 +94,9 @@
 									</header>
 									<p>We allow businesses to host their servers at our facilities. To find out more, please click the link below:</p>
 									<footer>
-										<ul class="buttons">
-											<li><a href="lti_collocation" class="button small">Server Hosting</a></li>
-										</ul>
+										<ul class="buttons vertical">
+							                 <li><a href="#lti_collocation" class="button fit scrolly">Tell Me More</a></li>
+                                        </ul>
 									</footer>
 								</section>
 
@@ -111,43 +111,41 @@
 						<!-- Content -->
 
 
-							<div class="content" id="lti_members">
+							<div class="content">
 								<section>
-
+                                    <article id="lti_members">
                                     <h3>About our Members</h3>
 									<a href="#" class="image featured"><img src="/images/LTIgroup.jpg" alt="LTI members" /></a>
 									<header>
 										<h3>About our Members</h3>
 									</header>
 									<p>Laker Tech Innovations  is a start up in  Sault Ste Marie, MI connecting business and technology together. Starting in 2014 LTI has created a strong infrastructure for businesses large or small to help promote technological growth in Northern Michigan by providing data centers, website design, and server hosting. Our goal is to build relationships with companies. We love what we do and are willing to go the extra mile to get things done. Our main data center location is located in Sault Ste Marie, Mi at the Ssmartzone Building. At Laker Tech innovations we focus on the customers and work with clients to create intelligent solutions.  </p>
+                                    </article>
 								</section>
 							</div>
 
-                        <div class="content" id="lti_centric">
+                        <div class="content">
 								<section>
-
+                                     <article id="lti_centric">
                                     <h3>About Centric</h3>
 
 									<p>Centric is a suite of software designed to allow an easy way to synchronize, backup, and restore data. We offer both a web and desktop interface to allow quick access to Centric on a multiple of devices. We have multiple plans designed to fit your business' needs. </p>
-								</section>
+                                    </article>
+                                         </section>
 							</div>
 
-                        <div class="content" id="lti_collocation">
+                        <div class="content">
 
 								<section>
-
+                                     <article id="lti_collocation">
 									<header>
 										<h3>Server Collocation</h3>
 									</header>
 									<p>Our services provide convenience and security for you. Laker Tech Innovations provides customers with 1u and 2u server hosting. Single server hosting provides customers with the ability to be able to control exactly the amount of space which cuts any excess cost. This is a great option for start ups and a way to micro manage bigger companies. All servers will be placed in secured racks. The safety of your data is our priority. <br>
-Our packages include:<br>
-                                   	<ul class="buttons">
-											<li><a href="lti_services.php/#lti_collocation" class="button small">Learn More</a></li>
-										</ul
-
-			</article></p>
+Our packages include:<br></p>
 
 
+                                    </article>
 								</section>
 							</div>
 					</section>

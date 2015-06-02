@@ -90,7 +90,7 @@ Our packages include:<br>
 									<header>
 										<h3>1u server </h3>
 									</header>
-									<p>$50 per month which includes Dual redundancy, Access by appointment</p>
+									<p>$50 per month which includes access by appointment</p>
 									<footer>
 										<ul class="buttons">
 											<!--<li><a href="#" class="button small">Learn More</a></li>-->
@@ -105,7 +105,7 @@ Our packages include:<br>
 									<header>
 										<h3>2u server</h3>
 									</header>
-									<p>$80 per month which includes Dual redundancy, 24 hour acces with LTI represenative guidance</p>
+									<p>$80 per month which includes access by appointment</p>
 									<footer>
 										<ul class="buttons">
 											<!--<li><a href="#" class="button small">Learn More</a></li>-->
@@ -120,7 +120,7 @@ Our packages include:<br>
 									<header>
 										<h3>Tower Server</h3>
 									</header>
-									<p>$90 per month which includes Dual redundancy, 24 hour access with LTI represenative guidance</p>
+									<p>$90 per month which includes access by appointment</p>
 									<footer>
 										<ul class="buttons">
 											<!--<li><a href="#" class="button small">Learn More</a></li>-->
@@ -144,7 +144,7 @@ Our packages include:<br>
 			<footer id="footer">
 
 				<ul class="icons">
-					<li><a href="https://www.facebook.com/lakertech" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
+				    <li><a href="https://www.facebook.com/lakertech" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
 					<li><a href="https://github.com/YamiND/LTI_Centric_v2" class="icon circle fa-github"><span class="label">Github</span></a></li>
 				</ul>
 
