@@ -51,7 +51,7 @@ if(isset($_POST['submit'])){
 				<h1 id="logo"><a href="index.php">Welcome To <span>LTI</span></a></h1>
 				<nav id="nav">
 					<ul>
-						<li class="current"><a href="index.html">Home</a></li>
+						<li class="current"><a href="index.php">Home</a></li>
 						<li class="submenu">
 							<a href="">Pages</a>
 							<ul>

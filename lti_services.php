@@ -32,7 +32,7 @@
 
 		<!-- Header -->
 			<header id="header" class="skel-layers-fixed">
-				<h1 id="logo"><a href="index.html">Welcome To <span>LTI</span></a></h1>
+				<h1 id="logo"><a href="index.php">Welcome To <span>LTI</span></a></h1>
 				<nav id="nav">
 					<ul>
 						<li class="current"><a href="index.php">Home</a></li>
@@ -40,20 +40,8 @@
 							<a href="">Pages</a>
 							<ul>
 								<li><a href="lti_about.php">About LTI</a></li>
-								<li><a href="lti_services.php">Services</a></li>
+								<li><a href="lti_services.php">Our Services</a></li>
 								<li><a href="lti_contact.php">Contact Us</a></li>
-								<!--
-                                <li class="submenu">
-									<a href="">Submenu</a>
-									<ul>
-										<li><a href="#">Dolore Sed</a></li>
-										<li><a href="#">Consequat</a></li>
-										<li><a href="#">Lorem Magna</a></li>
-										<li><a href="#">Sed Magna</a></li>
-										<li><a href="#">Ipsum Nisl</a></li>
-									</ul>
-								</li>
-                                -->
 							</ul>
 						</li>
 						<li><a href="lti_signin.php" class="button special">Sign Up</a></li>
