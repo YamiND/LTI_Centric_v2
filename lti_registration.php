@@ -277,20 +277,9 @@ if(isset($_POST['submit']))
 		<!-- Header -->
 			<header id="header" class="skel-layers-fixed">
 				<h1 id="logo"><a href="index.html">Laker Technology <span>Innovations</span></a></h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="lti_admin_panel.php">Admin Panel</a></li>
-						<li class="submenu">
-							<a href="">Pages</a>
-							<ul>
-								<li><a href="about-LTI.html">About LTI</a></li>
-								<li><a href="services.html">Services</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
-							</ul>
-						</li>
-						<li><a href="lti_signout.php" class="button special">Sign Out</a></li>
-					</ul>
-				</nav>
+				<div class="menu">
+                <?php include 'lti_menu.php';?>
+                </div>
 			</header>
 
 		<!-- Main -->
