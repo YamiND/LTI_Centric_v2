@@ -313,15 +313,15 @@
 				top: -0.2em;
 			}
 
-			.icon.circle.fa-twitter {
-				background: #70aecd;
+			.icon.circle.fa-envelope-o {
+				background: #B22222;
 				color: white;
 			}
 
-				.icon.circle.fa-twitter:hover {
-					background: #7fb7d2;
+				.icon.circle.fa-envelope-o:hover {
+					background: #B22222;
 				}
-
+            
 			.icon.circle.fa-facebook {
 				background: #7490c3;
 				color: white;
