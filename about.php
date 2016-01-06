@@ -28,7 +28,7 @@
 
 		<!-- Header -->
 			<header id="header" class="skel-layers-fixed">
-				<h1 id="logo"><a href="index.php">Welcome To <span>LTI</span></a></h1>
+				<h1 id="logo"><a href="index">Welcome To <span>LTI</span></a></h1>
 				<div class="menu">
                 <?php include 'lti_menu.php';?>
                 </div>

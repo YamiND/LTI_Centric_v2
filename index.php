@@ -28,7 +28,7 @@
 
 		<!-- Header -->
 			<header id="header" class="alt">
-				<h1 id="logo"><a href="index.php">Welcome to <span>LTI</span></a></h1>
+				<h1 id="logo"><a href="index">Welcome to <span>LTI</span></a></h1>
                 <div class="menu">
                 <?php include 'lti_menu.php';?>
                 </div>
