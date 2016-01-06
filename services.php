@@ -31,12 +31,7 @@
 	<body class="no-sidebar">
 
 		<!-- Header -->
-			<header id="header" class="skel-layers-fixed">
-				<h1 id="logo"><a href="index">Welcome To <span>LTI</span></a></h1>
-			<div class="menu">
-                <?php include 'lti_menu.php';?>
-                </div>
-			</header>
+			<?php include 'header.php';?>
 
 		<!-- Main -->
 			<article id="main">
@@ -118,18 +113,7 @@ Our packages include:<br>
         </section>
 
 		<!-- Footer -->
-			<footer id="footer">
-
-				<ul class="icons">
-				    <li><a href="https://www.facebook.com/lakertech" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="https://github.com/YamiND/LTI_Centric_v2" class="icon circle fa-github"><span class="label">Github</span></a></li>
-				</ul>
-
-				<ul class="copyright">
-					<li>&copy; LTI</li>
-				</ul>
-
-			</footer>
+			<?php include 'footer.php';?>
 
 	</body>
 </html>

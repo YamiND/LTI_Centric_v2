@@ -77,12 +77,7 @@ function Centric_Query($Centric_Query)
 	<body class="left-sidebar">
 
 		<!-- Header -->
-			<header id="header" class="skel-layers-fixed">
-				<h1 id="logo"><a href="index">Welcome To <span>LTI</span></a></h1>
-			<div class="menu">
-                <?php include 'lti_menu.php';?>
-                </div>
-			</header>
+			<?php include 'header.php';?>
 
 		<!-- Main -->
 			<article id="main">
