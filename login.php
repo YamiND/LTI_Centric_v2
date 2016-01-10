@@ -14,7 +14,7 @@ if (login_check($mysqli) == true) {
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Sign In</title>
+		<title>Login</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -61,7 +61,7 @@ if (login_check($mysqli) == true) {
 								<div class="content">
                                     <section>
                                         <header>
-                                            <h2>Sign In</h2>
+                                            <h2>Login</h2>
                                         </header>
 
                                         <?php

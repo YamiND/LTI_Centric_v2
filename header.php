@@ -13,7 +13,7 @@ echo '<header id="header" class="skel-layers-fixed">
 								<li><a href="contact-us">Contact Us</a></li>
 							</ul>
 						</li>
-						<li><a href="signin" class="button special">Sign In</a></li>
+						<li><a href="login" class="button special">Login</a></li>
 					</ul>
 				</nav>
                 </div>
