@@ -77,7 +77,8 @@ if(isset($_POST['submit']))
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-        <link href="/images/favicontest4.png" rel="icon" type="image/x-icon" />
+        <!-- favicon-->
+        <?php include 'favicon.php';?>
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.dropotron.min.js"></script>

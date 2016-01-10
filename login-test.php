@@ -19,7 +19,7 @@ if (login_check($mysqli) == true) {
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
         <!-- favicon-->
-        <link href="/LTI-Centric/images/favicontest4.png" rel="icon" type="image/x-icon" />
+        <?php include 'favicon.php';?>
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.dropotron.min.js"></script>
@@ -29,7 +29,9 @@ if (login_check($mysqli) == true) {
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
         <script src="js/validation.js"></script>
-
+        <script type="text/JavaScript" src="js/sha512.js"></script> 
+        <script type="text/JavaScript" src="js/forms.js"></script> 
+        
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -42,63 +44,54 @@ if (login_check($mysqli) == true) {
 	<body class="left-sidebar">
 
 		<!-- Header -->
-			<header id="header" class="skel-layers-fixed">
-				<h1 id="logo"><a href="index">Welcome To <span>LTI</span></a></h1>
-			<div class="menu">
-                <?php include 'lti_menu.php';?>
-                </div>
-			</header>
+			<?php include 'header.php';?>
 
 		<!-- Main -->
 			<article id="main">
-
 				<header class="special container">
 					<span class="icon fa-laptop"></span>
 					<h2>User Login</h2>
 					<p>Please log in to view your Centric</p>
 				</header>
-
 				<!-- One -->
 					<section class="wrapper style4 container">
-
 						<div class="row 150%">
-
 							<div class="8u 12u(narrower) important(narrower)">
-
 								<!-- Content -->
-									<div class="content">
-										<section>
-											<header>
-												<h2>Sign In</h2>
-											</header>
+								<div class="content">
+                                    <section>
+                                        <header>
+                                            <h2>Sign In</h2>
+                                        </header>
 
-                                            <?php
-        if (isset($_GET['error'])) {
-            echo '<p class="error">Error Logging In!</p>';
-        }
-        ?> 
-        <form action="includes/process_login.php" method="post" name="login_form">                      
-            Email: <input type="text" name="email" />
-            Password: <input type="password" 
-                             name="password" 
-                             id="password"/>
-            <input type="button" 
-                   value="Login" 
-                   onclick="formhash(this.form, this.form.password);" /> 
-        </form>
- 
-<?php
-        if (login_check($mysqli) == true) {
-                        echo '<p>Currently logged ' . $logged . ' as ' . htmlentities($_SESSION['username']) . '.</p>';
- 
-            echo '<p>Do you want to change user? <a href="includes/logout.php">Log out</a>.</p>';
-        } else {
-                        echo '<p>Currently logged ' . $logged . '.</p>';
-                        echo "<p>If you don't have a login, please <a href='register'>register</a></p>";
-                }
-?>      
-										</section>
-									</div>
+                                        <?php
+                                        if (isset($_GET['error'])) 
+                                        {
+                                            echo '<p class="error">Error Logging In!</p>';
+                                        }
+                                        ?> 
+                                        <form action="includes/process_login.php" method="post" name="login_form">                      
+                                            Email: <input type="text" name="email" />
+                                            Password: <input type="password" 
+                                                             name="password" 
+                                                             id="password"/>
+                                            <input type="button" 
+                                                   value="Login" 
+                                                   onclick="formhash(this.form, this.form.password);" /> 
+                                        </form>
+
+                                        <?php
+                                        if (login_check($mysqli) == true) {
+                                                        echo '<p>Currently logged ' . $logged . ' as ' . htmlentities($_SESSION['username']) . '.</p>';
+
+                                            echo '<p>Do you want to change user? <a href="includes/logout.php">Log out</a>.</p>';
+                                        } else {
+                                                        echo '<p>Currently logged ' . $logged . '.</p>';
+                                                        echo "<p>If you don't have a login, please <a href='register'>register</a></p>";
+                                                }
+                                ?>      
+                                    </section>
+								</div>
 							</div>
 						</div>
 					</section>

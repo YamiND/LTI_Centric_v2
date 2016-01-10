@@ -6,7 +6,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
         <!-- favicon-->
-        <link href="/images/favicontest4.png" rel="icon" type="image/x-icon" />
+        <?php include 'favicon.php';?>
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.dropotron.min.js"></script>
