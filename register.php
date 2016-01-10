@@ -9,7 +9,7 @@ sec_session_start();
 <!DOCTYPE html>
 <html>
     <head>
-		<title>Sign In</title>
+		<title>Register</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -36,52 +36,77 @@ sec_session_start();
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 	</head>
-    <body>
-        <?php if (login_check($mysqli) == true) : ?>
+    <body class="left-sidebar">
+        <!-- Header -->
+			<?php include 'header.php';?>
+         <?php if (login_check($mysqli) == true) : ?>
             <p>Welcome <?php echo htmlentities($_SESSION['username']); ?>!</p>
         <!-- Registration form to be output if the POST variables are not
         set or if the registration script caused an error. -->
-        <h1>Register with us</h1>
         <?php
-        if (!empty($error_msg)) {
+        if (!empty($error_msg)) 
+        {
             echo $error_msg;
         }
         ?>
-        <ul>
-            <li>Usernames may contain only digits, upper and lowercase letters and underscores</li>
-            <li>Emails must have a valid email format</li>
-            <li>Passwords must be at least 6 characters long</li>
-            <li>Passwords must contain
-                <ul>
-                    <li>At least one uppercase letter (A..Z)</li>
-                    <li>At least one lowercase letter (a..z)</li>
-                    <li>At least one number (0..9)</li>
-                </ul>
-            </li>
-            <li>Your password and confirmation must match exactly</li>
-        </ul>
-        <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" 
-                method="post" 
-                name="registration_form">
-            Username: <input type='text' 
-                name='username' 
-                id='username' /><br>
-            Email: <input type="text" name="email" id="email" /><br>
-            Password: <input type="password"
-                             name="password" 
-                             id="password"/><br>
-            Confirm password: <input type="password" 
-                                     name="confirmpwd" 
-                                     id="confirmpwd" /><br>
-            <input type="button" 
-                   value="Register" 
-                   onclick="return regformhash(this.form,
-                                   this.form.username,
-                                   this.form.email,
-                                   this.form.password,
-                                   this.form.confirmpwd);" /> 
-        </form>
-        <p>Return to the <a href="index">Index Page</a>.</p>
+        
+        <!-- Main -->
+			<article id="main">
+				<header class="special container">
+					<span class="icon fa-user"></span>
+					<h2>Register a new User</h2>
+				</header>
+				<!-- One -->
+					<section class="wrapper style4 container">
+						<div class="row 150%">
+							<div class="8u 12u(narrower) important(narrower)">
+								<!-- Content -->
+								<div class="content">
+                                    <section>
+                                        <header>
+                                            <ul class="buttons vertical">
+                                                <li>Usernames may contain only digits, upper and lowercase letters and underscores</li>
+                                                <li>Emails must have a valid email format</li>
+                                                <li>Passwords must be at least 6 characters long</li>
+                                                <li>Passwords must contain
+                                                    <ul class="buttons vertical">
+                                                        <li>At least one uppercase letter (A..Z)</li>
+                                                        <li>At least one lowercase letter (a..z)</li>
+                                                        <li>At least one number (0..9)</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </header>
+                                            <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" 
+                                            method="post" 
+                                            name="registration_form">
+                                        Username: <input type='text' 
+                                            name='username' 
+                                            id='username' /><br>
+                                        Email: <input type="text" name="email" id="email" /><br>
+                                        Password: <input type="password"
+                                                         name="password" 
+                                                         id="password"/><br>
+                                        Confirm password: <input type="password" 
+                                                                 name="confirmpwd" 
+                                                                 id="confirmpwd" /><br>
+                                        <input type="button" 
+                                               value="Register" 
+                                               onclick="return regformhash(this.form,
+                                                               this.form.username,
+                                                               this.form.email,
+                                                               this.form.password,
+                                                               this.form.confirmpwd);" /> 
+                                    </form>
+                                    <p>Return to the <a href="index">Index Page</a>.</p>
+                                        
+                                    </section>
+								</div>
+							</div>
+						</div>
+					</section>
+			</article>
+        
         <?php else : ?>
             <p>
                 <span class="error">You are not authorized to access this page.</span> Please <a href="login">login</a>.
