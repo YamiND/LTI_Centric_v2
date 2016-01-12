@@ -8,7 +8,7 @@ sec_session_start();
         
 echo '
             <header id="header" class="skel-layers-fixed">
-				<h1 id="logo"><a href="index">Welcome to <span>LTI</span></a></h1>
+				<h1 id="logo"><a href="index">Welcome <span>' . htmlentities($_SESSION['username']) . '</span></a></h1>
                 <div class="menu">
                 <nav id="nav">
 					<ul>
