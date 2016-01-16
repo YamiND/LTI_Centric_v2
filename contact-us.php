@@ -1,6 +1,6 @@
 <?php
-    include_once 'includes/db_connect.php';
-    include_once 'includes/functions.php';
+    include_once '/includes/db_connect.php';
+    include_once '/includes/functions.php';
 
     sec_session_start();
 ?>
@@ -12,25 +12,27 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
+        
         <!-- favicon-->
-        <?php include 'favicon.php';?>
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/jquery.scrolly.min.js"></script>
-		<script src="js/jquery.scrollgress.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
+            <?php include '/favicon.php';?>
+		
+        <!--[if lte IE 8]><script src="/css/ie/html5shiv.js"></script><![endif]-->
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/jquery.dropotron.min.js"></script>
+		<script src="/js/jquery.scrolly.min.js"></script>
+		<script src="/js/jquery.scrollgress.min.js"></script>
+		<script src="/js/skel.min.js"></script>
+		<script src="/js/skel-layers.min.js"></script>
+		<script src="/js/init.js"></script>
 		
         <!-- Stylesheets -->
-            <?php include 'css.php';?>
+            <?php include '/css.php';?>
         
 	</head>
 	<body class="contact">
 
 		<!-- Header -->
-			<?php include 'header.php';?>
+			<?php include '/header.php';?>
 
 		<!-- Main -->
 			<article id="main">
@@ -59,7 +61,7 @@
                                             echo "We are very sorry, but there were error(s) found with the form you submitted. ";
                                             echo "This was the error that occured:<br /><br />";
                                             echo $error."<br /><br />";
-                                            echo "Please <a href='contact-us'>go back</a> and fix these errors.<br /><br />";
+                                            echo "Please <a href='/contact-us'>go back</a> and fix these errors.<br /><br />";
                                             die();
                                         }
 
@@ -116,7 +118,7 @@
 
                                         mail($email_to, $email_subject, $email_message, $headers);  
 
-                                        echo "Thank you for contacting us! <a href='contact-us'>Go Back</a>";
+                                        echo "Thank you for contacting us! <a href='/contact-us'>Go Back</a>";
                                     }
                                     else {
                                     ?>
@@ -157,7 +159,7 @@
 			</article>
 
 		<!-- Footer -->
-			<?php include 'footer.php';?>
+			<?php include '/footer.php';?>
 
 	</body>
 </html>

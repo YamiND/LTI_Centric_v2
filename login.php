@@ -1,7 +1,7 @@
 <?php
 
-    include_once 'includes/db_connect.php';
-    include_once 'includes/functions.php';
+    include_once '/includes/db_connect.php';
+    include_once '/includes/functions.php';
 
     sec_session_start();
 
@@ -25,28 +25,28 @@
 		<meta name="keywords" content="" />
         
         <!-- favicon-->
-        <?php include 'favicon.php';?>
+        <?php include '/favicon.php';?>
 		
-        <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/jquery.scrolly.min.js"></script>
-		<script src="js/jquery.scrollgress.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-        <script type="text/JavaScript" src="js/sha512.js"></script> 
-        <script type="text/JavaScript" src="js/forms.js"></script> 
+        <!--[if lte IE 8]><script src="/css/ie/html5shiv.js"></script><![endif]-->
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/jquery.dropotron.min.js"></script>
+		<script src="/js/jquery.scrolly.min.js"></script>
+		<script src="/js/jquery.scrollgress.min.js"></script>
+		<script src="/js/skel.min.js"></script>
+		<script src="/js/skel-layers.min.js"></script>
+		<script src="/js/init.js"></script>
+        <script type="text/JavaScript" src="/js/sha512.js"></script> 
+        <script type="text/JavaScript" src="/js/forms.js"></script> 
         
 		<!-- Stylesheets -->
-            <?php include 'css.php';?>
+            <?php include '/css.php';?>
         
 	</head>
     
 	<body class="left-sidebar">
 
 		<!-- Header -->
-			<?php include 'header.php';?>
+			<?php include '/header.php';?>
 
 		<!-- Main -->
 			<article id="main">
@@ -87,7 +87,7 @@
                                             if (login_check($mysqli) == true) 
                                             {
                                                 echo '<p>Currently logged ' . $logged . ' as ' . htmlentities($_SESSION['username']) . '.</p>';
-                                                echo '<p>Do you want to change user? <a href="includes/logout.php">Log out</a>.</p>';
+                                                echo '<p>Do you want to change user? <a href="/includes/logout.php">Log out</a>.</p>';
                                             }
                                         ?>
                                         
@@ -97,5 +97,9 @@
 						</div>
 					</section>
 			</article>
-	</body>
+        
+        <!-- Footer -->
+			<?php include '/footer.php';?>
+	
+    </body>
 </html>

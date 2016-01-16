@@ -1,3 +1,10 @@
+<?php
+    include_once '/includes/db_connect.php';
+    include_once '/includes/functions.php';
+
+    sec_session_start();
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -5,29 +12,27 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
+        
         <!-- favicon-->
-        <?php include 'favicon.php';?>
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/jquery.scrolly.min.js"></script>
-		<script src="js/jquery.scrollgress.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-wide.css" />
-			<link rel="stylesheet" href="css/style-noscript.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-	</head>
+            <?php include '/favicon.php';?>
+		
+        <!--[if lte IE 8]><script src="/css/ie/html5shiv.js"></script><![endif]-->
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/jquery.dropotron.min.js"></script>
+		<script src="/js/jquery.scrolly.min.js"></script>
+		<script src="/js/jquery.scrollgress.min.js"></script>
+		<script src="/js/skel.min.js"></script>
+		<script src="/js/skel-layers.min.js"></script>
+		<script src="/js/init.js"></script>
+		
+        <!-- Stylesheets -->
+            <?php include '/css.php';?>
+	
+    </head>
 	<body class="index">
 
 		<!-- Header -->
-			<?php include 'header.php';?>
+			<?php include '/header.php';?>
 
 		<!-- Banner -->
 			<section id="banner">
@@ -113,7 +118,7 @@
         </article>
 
 		<!-- Footer -->
-			<?php include 'footer.php';?>
+			<?php include '/footer.php';?>
 
 	</body>
 </html>

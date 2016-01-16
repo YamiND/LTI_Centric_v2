@@ -1,7 +1,7 @@
 <?php
-include_once 'includes/register.inc.php';
-include_once 'includes/functions.php';
-include_once 'includes/db_connect.php';
+include_once '/includes/register.inc.php';
+include_once '/includes/functions.php';
+include_once '/includes/db_connect.php';
  
 sec_session_start();
 ?>
@@ -13,27 +13,29 @@ sec_session_start();
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
+        
         <!-- favicon-->
-        <?php include 'favicon.php';?>
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/jquery.scrolly.min.js"></script>
-		<script src="js/jquery.scrollgress.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-        <script src="js/validation.js"></script>
-        <script type="text/JavaScript" src="js/sha512.js"></script> 
-        <script type="text/JavaScript" src="js/forms.js"></script> 
+            <?php include '/favicon.php';?>
+		
+        <!--[if lte IE 8]><script src="/css/ie/html5shiv.js"></script><![endif]-->
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/jquery.dropotron.min.js"></script>
+		<script src="/js/jquery.scrolly.min.js"></script>
+		<script src="/js/jquery.scrollgress.min.js"></script>
+		<script src="/js/skel.min.js"></script>
+		<script src="/js/skel-layers.min.js"></script>
+		<script src="/js/init.js"></script>
+        <script src="/js/validation.js"></script>
+        <script type="text/JavaScript" src="/js/sha512.js"></script> 
+        <script type="text/JavaScript" src="/js/forms.js"></script> 
         
 		<!-- Stylesheets -->
-            <?php include 'css.php';?>
+            <?php include '/css.php';?>
         
 	</head>
     <body class="left-sidebar">
         <!-- Header -->
-			<?php include 'header.php';?>
+			<?php include '/header.php';?>
          <?php if (login_check($mysqli) == true) : ?>
             <p>Welcome <?php echo htmlentities($_SESSION['username']); ?>!</p>
         <!-- Registration form to be output if the POST variables are not
@@ -93,7 +95,7 @@ sec_session_start();
                                                                this.form.password,
                                                                this.form.confirmpwd);" /> 
                                     </form>
-                                    <p>Return to the <a href="index">Index Page</a>.</p>
+                                    <p>Return to the <a href="/index">Index Page</a>.</p>
                                         
                                     </section>
 								</div>
@@ -104,7 +106,7 @@ sec_session_start();
         
         <?php else : ?>
             <p>
-                <span class="error">You are not authorized to access this page.</span> Please <a href="login">login</a>.
+                <span class="error">You are not authorized to access this page.</span> Please <a href="/login">login</a>.
             </p>
         <?php endif; ?>
     </body>

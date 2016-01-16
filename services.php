@@ -1,6 +1,6 @@
 <?php
-    include_once 'includes/db_connect.php';
-    include_once 'includes/functions.php';
+    include_once '/includes/db_connect.php';
+    include_once '/includes/functions.php';
 
     sec_session_start();
 ?>
@@ -12,25 +12,27 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
+        
         <!-- favicon-->
-        <?php include 'favicon.php';?>
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/jquery.scrolly.min.js"></script>
-		<script src="js/jquery.scrollgress.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
+            <?php include '/favicon.php';?>
+        
+		<!--[if lte IE 8]><script src="/css/ie/html5shiv.js"></script><![endif]-->
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/jquery.dropotron.min.js"></script>
+		<script src="/js/jquery.scrolly.min.js"></script>
+		<script src="/js/jquery.scrollgress.min.js"></script>
+		<script src="/js/skel.min.js"></script>
+		<script src="/js/skel-layers.min.js"></script>
+		<script src="/js/init.js"></script>
 		
         <!-- Stylesheets -->
-            <?php include 'css.php';?>
+            <?php include '/css.php';?>
         
 	</head>
 	<body class="no-sidebar">
 
 		<!-- Header -->
-			<?php include 'header.php';?>
+			<?php include '/header.php';?>
 
 		<!-- Main -->
 			<article id="main">
@@ -112,7 +114,7 @@ Our packages include:<br>
         </section>
 
 		<!-- Footer -->
-			<?php include 'footer.php';?>
+			<?php include '/footer.php';?>
 
 	</body>
 </html>
