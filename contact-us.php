@@ -13,8 +13,8 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
         
-        <!-- favicon-->
-            <?php include '/favicon.php';?>
+        <!-- Favicon-->
+            <?php include 'favicon.php';?>
 		
         <!--[if lte IE 8]><script src="/css/ie/html5shiv.js"></script><![endif]-->
 		<script src="/js/jquery.min.js"></script>
@@ -153,9 +153,7 @@
                                         }
                                     ?>
 							</div>
-
 					</section>
-
 			</article>
 
 		<!-- Footer -->

@@ -14,7 +14,7 @@ sec_session_start();
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
         
-        <!-- favicon-->
+        <!-- Favicon-->
             <?php include 'favicon.php';?>
 		
         <!--[if lte IE 8]><script src="/css/ie/html5shiv.js"></script><![endif]-->
@@ -36,10 +36,10 @@ sec_session_start();
     <body class="left-sidebar">
         <!-- Header -->
 			<?php include 'header.php';?>
-         <?php if (login_check($mysqli) == true) : ?>
+         
+        <?php if (login_check($mysqli) == true) : ?>
             <p>Welcome <?php echo htmlentities($_SESSION['username']); ?>!</p>
-        <!-- Registration form to be output if the POST variables are not
-        set or if the registration script caused an error. -->
+        
         <?php
         if (!empty($error_msg)) 
         {

@@ -7,6 +7,6 @@
     </head>
     <body>
         <h1>Registration successful!</h1>
-        <p>You can now go back to the <a href="login-test">login page</a> and log in</p>
+        <p>You can now go back to the <a href="login">login page</a> and log in</p>
     </body>
 </html>
