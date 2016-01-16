@@ -1,14 +1,19 @@
 <?php
-include_once 'includes/db_connect.php';
-include_once 'includes/functions.php';
- 
-sec_session_start();
- 
-if (login_check($mysqli) == true) {
-    $logged = 'in';
-} else {
-    $logged = 'out';
-}
+
+    include_once 'includes/db_connect.php';
+    include_once 'includes/functions.php';
+
+    sec_session_start();
+
+    if (login_check($mysqli) == true) 
+    {
+        $logged = 'in';
+    } 
+    else 
+    {
+        $logged = 'out';
+    }
+
 ?>
 
 <!DOCTYPE HTML>
@@ -18,9 +23,11 @@ if (login_check($mysqli) == true) {
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
+        
         <!-- favicon-->
         <?php include 'favicon.php';?>
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		
+        <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.dropotron.min.js"></script>
 		<script src="js/jquery.scrolly.min.js"></script>
@@ -28,7 +35,6 @@ if (login_check($mysqli) == true) {
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
-        <script src="js/validation.js"></script>
         <script type="text/JavaScript" src="js/sha512.js"></script> 
         <script type="text/JavaScript" src="js/forms.js"></script> 
         
@@ -41,6 +47,7 @@ if (login_check($mysqli) == true) {
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 	</head>
+    
 	<body class="left-sidebar">
 
 		<!-- Header -->
@@ -51,7 +58,6 @@ if (login_check($mysqli) == true) {
 				<header class="special container">
 					<span class="icon fa-laptop"></span>
 					<h2>User Login</h2>
-					<p>Please log in to view your Centric</p>
 				</header>
 				<!-- One -->
 					<section class="wrapper style4 container">
@@ -65,11 +71,12 @@ if (login_check($mysqli) == true) {
                                         </header>
 
                                         <?php
-                                        if (isset($_GET['error'])) 
-                                        {
-                                            echo '<p class="error">Error Logging In!</p>';
-                                        }
-                                        ?> 
+                                            if (isset($_GET['error'])) 
+                                            {
+                                                echo '<p class="error">Error Logging In!</p>';
+                                            }
+                                        ?>
+                                        
                                         <form action="includes/process_login.php" method="post" name="login_form">                      
                                             Email: <input type="text" name="email" />
                                             Password: <input type="password" 
@@ -79,17 +86,15 @@ if (login_check($mysqli) == true) {
                                                    value="Login" 
                                                    onclick="formhash(this.form, this.form.password);" /> 
                                         </form>
-
+                                        
                                         <?php
-                                        if (login_check($mysqli) == true) {
-                                                        echo '<p>Currently logged ' . $logged . ' as ' . htmlentities($_SESSION['username']) . '.</p>';
-
-                                            echo '<p>Do you want to change user? <a href="includes/logout.php">Log out</a>.</p>';
-                                        } else {
-                                                        echo '<p>Currently logged ' . $logged . '.</p>';
-                                                        echo "<p>If you don't have a login, please <a href='register'>register</a></p>";
-                                                }
-                                ?>      
+                                            if (login_check($mysqli) == true) 
+                                            {
+                                                echo '<p>Currently logged ' . $logged . ' as ' . htmlentities($_SESSION['username']) . '.</p>';
+                                                echo '<p>Do you want to change user? <a href="includes/logout.php">Log out</a>.</p>';
+                                            }
+                                        ?>
+                                        
                                     </section>
 								</div>
 							</div>
