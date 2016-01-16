@@ -82,6 +82,7 @@
                                             Password: <input type="password" 
                                                              name="password" 
                                                              id="password"/>
+                                            
                                             <input type="button" 
                                                    value="Login" 
                                                    onclick="formhash(this.form, this.form.password);" /> 
