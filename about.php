@@ -15,7 +15,7 @@
 		<meta name="keywords" content="" />
         
         <!-- favicon-->
-            <?php include '/favicon.php';?>
+            <?php include 'favicon.php';?>
 		
         <!--[if lte IE 8]><script src="/css/ie/html5shiv.js"></script><![endif]-->
 		<script src="/js/jquery.min.js"></script>
@@ -27,13 +27,13 @@
 		<script src="/js/init.js"></script>
 		
         <!-- Stylesheets -->
-            <?php include '/css.php';?>
+            <?php include 'css.php';?>
         
 	</head>
 	<body class="no-sidebar">
 
 		<!-- Header -->
-			<?php include '/header.php';?>
+			<?php include 'header.php';?>
 
 		<!-- Main -->
 			<article id="main">
@@ -141,7 +141,7 @@
 			</article>
 
 		<!-- Footer -->
-			<?php include '/footer.php';?>
+			<?php include 'footer.php';?>
 
 	</body>
 </html>

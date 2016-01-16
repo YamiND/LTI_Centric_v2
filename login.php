@@ -25,7 +25,7 @@
 		<meta name="keywords" content="" />
         
         <!-- favicon-->
-        <?php include '/favicon.php';?>
+        <?php include 'favicon.php';?>
 		
         <!--[if lte IE 8]><script src="/css/ie/html5shiv.js"></script><![endif]-->
 		<script src="/js/jquery.min.js"></script>
@@ -39,14 +39,14 @@
         <script type="text/JavaScript" src="/js/forms.js"></script> 
         
 		<!-- Stylesheets -->
-            <?php include '/css.php';?>
+            <?php include 'css.php';?>
         
 	</head>
     
 	<body class="left-sidebar">
 
 		<!-- Header -->
-			<?php include '/header.php';?>
+			<?php include 'header.php';?>
 
 		<!-- Main -->
 			<article id="main">
@@ -72,7 +72,7 @@
                                             }
                                         ?>
                                         
-                                        <form action="includes/process_login.php" method="post" name="login_form">                      
+                                        <form action="/includes/process_login.php" method="post" name="login_form">                      
                                             Email: <input type="text" name="email" />
                                             Password: <input type="password" 
                                                              name="password" 
@@ -99,7 +99,7 @@
 			</article>
         
         <!-- Footer -->
-			<?php include '/footer.php';?>
+			<?php include 'footer.php';?>
 	
     </body>
 </html>

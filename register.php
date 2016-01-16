@@ -15,7 +15,7 @@ sec_session_start();
 		<meta name="keywords" content="" />
         
         <!-- favicon-->
-            <?php include '/favicon.php';?>
+            <?php include 'favicon.php';?>
 		
         <!--[if lte IE 8]><script src="/css/ie/html5shiv.js"></script><![endif]-->
 		<script src="/js/jquery.min.js"></script>
@@ -30,12 +30,12 @@ sec_session_start();
         <script type="text/JavaScript" src="/js/forms.js"></script> 
         
 		<!-- Stylesheets -->
-            <?php include '/css.php';?>
+            <?php include 'css.php';?>
         
 	</head>
     <body class="left-sidebar">
         <!-- Header -->
-			<?php include '/header.php';?>
+			<?php include 'header.php';?>
          <?php if (login_check($mysqli) == true) : ?>
             <p>Welcome <?php echo htmlentities($_SESSION['username']); ?>!</p>
         <!-- Registration form to be output if the POST variables are not
@@ -95,7 +95,7 @@ sec_session_start();
                                                                this.form.password,
                                                                this.form.confirmpwd);" /> 
                                     </form>
-                                    <p>Return to the <a href="/index">Index Page</a>.</p>
+                                    <p>Return to the <a href="index">Index Page</a>.</p>
                                         
                                     </section>
 								</div>
@@ -106,7 +106,7 @@ sec_session_start();
         
         <?php else : ?>
             <p>
-                <span class="error">You are not authorized to access this page.</span> Please <a href="/login">login</a>.
+                <span class="error">You are not authorized to access this page.</span> Please <a href="login">login</a>.
             </p>
         <?php endif; ?>
     </body>

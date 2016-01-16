@@ -26,13 +26,13 @@
 		<script src="/js/init.js"></script>
 		
         <!-- Stylesheets -->
-            <?php include '/css.php';?>
+            <?php include 'css.php';?>
         
 	</head>
 	<body class="contact">
 
 		<!-- Header -->
-			<?php include '/header.php';?>
+			<?php include 'header.php';?>
 
 		<!-- Main -->
 			<article id="main">
@@ -159,7 +159,7 @@
 			</article>
 
 		<!-- Footer -->
-			<?php include '/footer.php';?>
+			<?php include 'footer.php';?>
 
 	</body>
 </html>
