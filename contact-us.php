@@ -4,8 +4,8 @@ if(isset($_POST['submit']))
 {
     //Email information
     $email_to = "contact-us@lakertech.com";
-    $email_from = "website@lakertech.com";
-      
+    $email_from = $_POST['email'];
+    
     function died($error) 
     {    
         echo "We are very sorry, but there were error(s) found with the form you submitted. ";
@@ -58,8 +58,9 @@ if(isset($_POST['submit']))
     $email_message .= "Comments: ".clean_string($message)."\n";
  
     // create email headers
- 
-    $headers = 'From: '.$email_from."\r\n".
+    $email_server = "website@lakertech.com";
+    
+    $headers = 'From: '.$email_server."\r\n".
     'Reply-To: '.$email_from."\r\n" .
     'X-Mailer: PHP/' . phpversion();
  
