@@ -73,6 +73,16 @@
                                             }
                                         ?>
                                         
+                                        <?php
+                                            if (login_check($mysqli) == true) 
+                                            {
+                                                echo '<p>Currently logged ' . $logged . ' as ' . htmlentities($_SESSION['username']) . '.</p>';
+                                                echo '<p>Do you want to change user? <a href="/includes/logout.php">Log out</a>.</p>';
+                                            }
+                                            else 
+                                            {
+                                        ?>
+                                    
                                         <form action="/includes/process_login.php" method="post" name="login_form">                      
                                             Email: <input type="text" name="email" />
                                             Password: <input type="password" 
@@ -83,12 +93,7 @@
                                                    value="Login" 
                                                    onclick="formhash(this.form, this.form.password);" /> 
                                         </form>
-                                        
                                         <?php
-                                            if (login_check($mysqli) == true) 
-                                            {
-                                                echo '<p>Currently logged ' . $logged . ' as ' . htmlentities($_SESSION['username']) . '.</p>';
-                                                echo '<p>Do you want to change user? <a href="/includes/logout.php">Log out</a>.</p>';
                                             }
                                         ?>
                                         
